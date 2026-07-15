@@ -399,7 +399,7 @@ function startCounters() {
 
   countersStarted = true;
 
-  const counters = document.querySelectorAll(".stats h2");
+  const counters = document.querySelectorAll(".stats h2, .benchmark-stats .counter-value");
 
   counters.forEach(counter => {
 
