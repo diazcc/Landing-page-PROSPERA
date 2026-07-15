@@ -116,16 +116,6 @@ Las funciones de registro, inicio de sesión, perfil de usuario y postulación a
 
 ---
 
-## 🎓 Proyecto académico
-
-**Institución:** Corporación Unificada Nacional de Educación Superior (CUN)
-
-**Asignatura:** Emprendimiento
-
-**Tipo de proyecto:** Desarrollo de una Landing Page para la presentación de una idea de negocio.
-
----
-
 ## 📄 Licencia
 
 Este proyecto fue desarrollado exclusivamente con fines académicos.
