@@ -244,6 +244,7 @@ NAVBAR
   align-items: center;
 
   padding: 18px 8%;
+  box-sizing: border-box;
 
   transition: .45s;
 
@@ -346,7 +347,6 @@ NAVBAR
   position: relative;
 
   font-weight: 600;
-
   transition: .3s;
 
 }
