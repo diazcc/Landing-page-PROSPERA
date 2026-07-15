@@ -3,6 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="PROSPERA conecta trabajadores independientes con clientes mediante una plataforma tecnológica segura para impulsar la formalización laboral en Colombia." />
+    <meta name="keywords" content="freelancers, trabajadores independientes, plataforma de empleo, Colombia, servicios profesionales" />
+    <meta name="author" content="PROSPERA" />
+    <meta property="og:title" content="PROSPERA | Transformando el trabajo informal" />
+    <meta property="og:description" content="Conecta con oportunidades reales. Plataforma segura para trabajadores independientes en Colombia." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://prospera.col" />
+    <meta property="og:image" content="https://i.postimg.cc/ygMckXbL/sello-del-ejemplo-28420393.webp" />
+    <meta name="theme-color" content="#18B07A" />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='75' font-size='75' font-weight='bold' fill='%2318B07A'>P</text></svg>" />
 
     <title>PROSPERA | Transformando el trabajo informal</title>
 
@@ -24,22 +34,25 @@
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css"
+      integrity="sha512-..."
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
     />
   </head>
 
   <body>
-    <div id="loader">
+    <div id="loader" aria-label="Cargando PROSPERA" aria-live="polite">
       <div class="loader-logo">
-        <i class="fa-solid fa-handshake-angle"></i>
+        <i class="fa-solid fa-handshake-angle" aria-hidden="true"></i>
 
         <h2>PROSPERA</h2>
       </div>
     </div>
 
-    <div id="cursor-light"></div>
+    <div id="cursor-light" aria-hidden="true"></div>
 
-    <button id="topButton">
-      <i class="fa-solid fa-arrow-up"></i>
+    <button id="topButton" title="Volver al inicio" aria-label="Volver al inicio">
+      <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
     </button>
     <div class="background">
       <div class="blob blob1"></div>
@@ -53,37 +66,58 @@
     <div id="particles-js"></div>
 
     <header>
-      <nav id="navbar">
-        <div class="logo">
-          <i class="fa-solid fa-handshake-angle"></i>
+      <nav id="navbar" role="navigation" aria-label="Navegación principal">
+        <div class="logo" aria-label="PROSPERA - Inicio">
+          <i class="fa-solid fa-handshake-angle" aria-hidden="true"></i>
 
           <span>PROSPERA</span>
         </div>
 
         <ul>
-          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#inicio" title="Ir a Inicio">Inicio</a></li>
 
-          <li><a href="#nosotros">Nosotros</a></li>
+          <li><a href="#nosotros" title="Ir a Nosotros">Nosotros</a></li>
 
-          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#servicios" title="Ir a Servicios">Servicios</a></li>
 
-          <li><a href="#funciona">Cómo funciona</a></li>
+          <li><a href="#funciona" title="Ir a Cómo funciona">Cómo funciona</a></li>
 
-          <li><a href="#contacto">Contacto</a></li>
+          <li><a href="#contacto" title="Ir a Contacto">Contacto</a></li>
         </ul>
 
-        <a class="btn-nav" href="#">Comenzar</a>
+        <div class="nav-buttons">
+          <a href="https://www.instagram.com/prospera.col/" target="_blank" rel="noopener noreferrer" class="btn-instagram" title="Síguenos en Instagram" aria-label="Instagram de PROSPERA">
+            <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+          </a>
+          <div class="profile-menu-wrapper" id="profileMenuWrapper">
+            <button type="button" class="btn-nav" id="navAuthButton" data-open-modal="registerModal" title="Abrir registro de PROSPERA">Comenzar</button>
+            <div class="profile-dropdown" id="profileDropdown" role="menu" aria-label="Menú de perfil">
+              <button type="button" class="dropdown-item" data-open-modal="profileModal" role="menuitem">
+                <i class="fa-solid fa-user" aria-hidden="true"></i>
+                <span>Mi Perfil</span>
+              </button>
+              <button type="button" class="dropdown-item" data-open-modal="dashboardModal" role="menuitem">
+                <i class="fa-solid fa-briefcase" aria-hidden="true"></i>
+                <span>Mis Trabajos</span>
+              </button>
+              <button type="button" class="dropdown-item" data-open-modal="settingsModal" role="menuitem">
+                <i class="fa-solid fa-gear" aria-hidden="true"></i>
+                <span>Configuración</span>
+              </button>
+              <button type="button" class="dropdown-item logout" id="logoutButton" role="menuitem">
+                <i class="fa-solid fa-right-from-bracket" aria-hidden="true"></i>
+                <span>Cerrar Sesión</span>
+              </button>
+            </div>
+          </div>
+        </div>
       </nav>
     </header>
 
     <!-- HERO -->
 
-    <section class="hero reveal" id="inicio">
+    <section class="hero reveal" id="inicio" style="padding-top: 100px">
       <div class="hero-left">
-        <span class="badge">
-          Nueva plataforma para trabajadores independientes
-        </span>
-
         <h1>Transformando el trabajo informal en oportunidades reales.</h1>
 
         <p>
@@ -93,38 +127,41 @@
         </p>
 
         <div class="hero-buttons">
-          <a href="#servicios" class="btn-primary"> Conocer plataforma </a>
+          <a href="#servicios" class="btn-primary" title="Conocer nuestra plataforma"> Conocer plataforma </a>
 
-          <a href="#funciona" class="btn-secondary"> ¿Cómo funciona? </a>
-        </div>
-
-        <div class="stats">
-          <div>
-            <h2 data-value="100">0</h2>
-
-            <p>Perfiles Verificados</p>
-          </div>
-
-          <div>
-            <h2 data-value="500">0</h2>
-
-            <p>Profesionales</p>
-          </div>
-
-          <div>
-            <h2 data-value="24">0</h2>
-
-            <p>Disponibilidad</p>
-          </div>
+          <a href="#funciona" class="btn-secondary" title="Ver cómo funciona PROSPERA"> ¿Cómo funciona? </a>
         </div>
       </div>
 
       <div class="hero-right">
-        <!-- <img src="assets/hero.svg" /> -->
-        <img src='https://i.postimg.cc/ygMckXbL/sello-del-ejemplo-28420393.webp' border='0' alt='sello-del-ejemplo-28420393'>
+        <img
+          src="https://i.postimg.cc/ygMckXbL/sello-del-ejemplo-28420393.webp"
+          alt="PROSPERA - Plataforma de trabajadores independientes"
+          loading="lazy"
+        />
       </div>
     </section>
+    <section class="reveal" style="padding: 0px 0%" id="estadisticas">
+      <div class="stats" style="margin-top: 0px; padding: 0px auto; justify-content: center">
+        <div>
+          <h2 data-value="100">0</h2>
 
+          <p>Perfiles Verificados</p>
+        </div>
+
+        <div>
+          <h2 data-value="500">0</h2>
+
+          <p>Profesionales</p>
+        </div>
+
+        <div>
+          <h2 data-value="24">0</h2>
+
+          <p>Disponibilidad</p>
+        </div>
+      </div>
+    </section>
     <!-- NOSOTROS -->
 
     <section class="about reveal" id="nosotros">
@@ -139,8 +176,11 @@
 
       <div class="about-grid">
         <div class="about-image">
-          <!-- <img src="assets/about.svg" /> -->
-          <img src='https://i.postimg.cc/ygMckXbL/sello-del-ejemplo-28420393.webp' border='0' alt='sello-del-ejemplo-28420393'>
+          <img
+            src="https://i.postimg.cc/ygMckXbL/sello-del-ejemplo-28420393.webp"
+            alt="Características de PROSPERA"
+            loading="lazy"
+          />
         </div>
 
         <div class="about-content">
@@ -300,8 +340,11 @@
 
       <div class="target-grid">
         <div class="target-card">
-          <!-- <img src="assets/freelancer.svg" /> -->
-          <img src='https://i.postimg.cc/ygMckXbL/sello-del-ejemplo-28420393.webp' border='0' alt='sello-del-ejemplo-28420393'>
+          <img
+            src="https://i.postimg.cc/ygMckXbL/sello-del-ejemplo-28420393.webp"
+            alt="Trabajadores independientes y freelancers"
+            loading="lazy"
+          />
 
           <h3>Trabajadores Independientes</h3>
 
@@ -312,8 +355,12 @@
         </div>
 
         <div class="target-card">
-          <!-- <img src="assets/client.svg" /> -->
-<img src='https://i.postimg.cc/ygMckXbL/sello-del-ejemplo-28420393.webp' border='0' alt='sello-del-ejemplo-28420393'>
+          <img
+            src="https://i.postimg.cc/ygMckXbL/sello-del-ejemplo-28420393.webp"
+            alt="Empresas contratando servicios"
+            loading="lazy"
+          />
+          <h3>Empresas y Clientes</h3>
           <p>
             Empresas e individuos que necesitan contratar servicios confiables
             de forma rápida y segura.
@@ -453,8 +500,11 @@ TESTIMONIOS
 
       <div class="testimonial-slider">
         <div class="testimonial active">
-          <!-- <img src="assets/avatar1.png" /> -->
-          <img src='https://i.postimg.cc/ygMckXbL/sello-del-ejemplo-28420393.webp' border='0' alt='sello-del-ejemplo-28420393'>
+          <img
+            src="https://i.postimg.cc/ygMckXbL/sello-del-ejemplo-28420393.webp"
+            alt="Laura Gómez - Diseñadora Freelance"
+            loading="lazy"
+          />
 
           <p>
             "Gracias a PROSPERA encontré clientes estables y mejoré mis
@@ -467,8 +517,11 @@ TESTIMONIOS
         </div>
 
         <div class="testimonial">
-          <!-- <img src="assets/avatar2.png" /> -->
-           <img src='https://i.postimg.cc/ygMckXbL/sello-del-ejemplo-28420393.webp' border='0' alt='sello-del-ejemplo-28420393'>
+          <img
+            src="https://i.postimg.cc/ygMckXbL/sello-del-ejemplo-28420393.webp"
+            alt="Carlos Ruiz - Empresario"
+            loading="lazy"
+          />
 
           <p>
             "Ahora contratar profesionales confiables es mucho más sencillo."
@@ -480,8 +533,11 @@ TESTIMONIOS
         </div>
 
         <div class="testimonial">
-          <!-- <img src="assets/avatar3.png" /> -->
-          <img src='https://i.postimg.cc/ygMckXbL/sello-del-ejemplo-28420393.webp' border='0' alt='sello-del-ejemplo-28420393'>
+          <img
+            src="https://i.postimg.cc/ygMckXbL/sello-del-ejemplo-28420393.webp"
+            alt="María Torres - Arquitecta"
+            loading="lazy"
+          />
 
           <p>
             "Los pagos seguros me dieron tranquilidad desde el primer proyecto."
@@ -503,8 +559,387 @@ CTA
 
       <p>Transforma tu talento en oportunidades reales.</p>
 
-      <a href="#" class="btn-primary"> Crear cuenta </a>
+      <div class="cta-buttons">
+        <button type="button" class="btn-primary" data-open-modal="registerModal" title="Crear cuenta en PROSPERA"> Crear cuenta </button>
+        <a href="https://www.instagram.com/prospera.col/" target="_blank" rel="noopener noreferrer" class="btn-instagram-large" title="Síguenos en Instagram">
+          <i class="fa-brands fa-instagram" aria-hidden="true"></i> Síguenos en Instagram
+        </a>
+      </div>
     </section>
+
+    <!-- ===========================
+FOOTER
+=========================== -->
+
+    <footer id="contacto">
+      <div class="footer-content">
+        <div class="footer-section">
+          <div class="footer-logo">
+            <i class="fa-solid fa-handshake-angle" aria-hidden="true"></i>
+            <span>PROSPERA</span>
+          </div>
+          <p>Transformando el trabajo informal en oportunidades reales.</p>
+        </div>
+
+        <div class="footer-section">
+          <h4>Navegación</h4>
+          <ul>
+            <li><a href="#inicio" title="Ir a Inicio">Inicio</a></li>
+            <li><a href="#nosotros" title="Ir a Nosotros">Nosotros</a></li>
+            <li><a href="#servicios" title="Ir a Servicios">Servicios</a></li>
+            <li><a href="#funciona" title="Ir a Cómo funciona">Cómo funciona</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h4>Contacto</h4>
+          <ul>
+            <li>
+              <a href="mailto:contacto.prospera.col@gmail.com" class="contact-link" title="Enviar email a PROSPERA">
+                <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+                contacto.prospera.col@gmail.com
+              </a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/prospera.col/" target="_blank" rel="noopener noreferrer" class="contact-link" title="Seguir PROSPERA en Instagram">
+                <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+                @prospera.col
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h4>Síguenos</h4>
+          <div class="social-links">
+            <a href="mailto:contacto.prospera.col@gmail.com" title="Enviar email" aria-label="Email de PROSPERA">
+              <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+            </a>
+            <a href="https://www.instagram.com/prospera.col/" target="_blank" rel="noopener noreferrer" title="Instagram de PROSPERA" aria-label="Instagram de PROSPERA">
+              <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2024 PROSPERA. Todos los derechos reservados. | Hecho con <i class="fa-solid fa-heart" aria-hidden="true"></i> para trabajadores independientes.</p>
+      </div>
+    </footer>
+
+    <div class="modal-overlay" id="registerModal" aria-hidden="true">
+      <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="registerTitle" tabindex="-1">
+        <button type="button" class="modal-close" data-close-modal="registerModal" aria-label="Cerrar modal">
+          <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+        </button>
+
+        <div class="modal-header">
+          <div class="modal-icon">
+            <i class="fa-solid fa-user-plus" aria-hidden="true"></i>
+          </div>
+          <h2 id="registerTitle">Crea tu cuenta PROSPERA</h2>
+          <p>Únete a una comunidad premium de oportunidades laborales.</p>
+        </div>
+
+        <form id="registerForm" class="auth-form" novalidate>
+          <div class="form-grid">
+            <div class="input-group">
+              <label for="fullName">Nombre completo</label>
+              <div class="input-with-icon">
+                <i class="fa-solid fa-user" aria-hidden="true"></i>
+                <input id="fullName" name="fullName" type="text" placeholder="Juan Pérez" autocomplete="name" />
+              </div>
+              <div class="field-error" data-error-for="fullName"></div>
+            </div>
+
+            <div class="input-group">
+              <label for="email">Correo electrónico</label>
+              <div class="input-with-icon">
+                <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+                <input id="email" name="email" type="email" placeholder="tucorreo@ejemplo.com" autocomplete="email" />
+              </div>
+              <div class="field-error" data-error-for="email"></div>
+            </div>
+
+            <div class="input-group">
+              <label for="password">Contraseña</label>
+              <div class="input-with-icon">
+                <i class="fa-solid fa-lock" aria-hidden="true"></i>
+                <input id="password" name="password" type="password" placeholder="Mínimo 8 caracteres" autocomplete="new-password" />
+              </div>
+              <div class="field-error" data-error-for="password"></div>
+            </div>
+
+            <div class="input-group">
+              <label for="confirmPassword">Confirmar contraseña</label>
+              <div class="input-with-icon">
+                <i class="fa-solid fa-lock" aria-hidden="true"></i>
+                <input id="confirmPassword" name="confirmPassword" type="password" placeholder="Repite tu contraseña" autocomplete="new-password" />
+              </div>
+              <div class="field-error" data-error-for="confirmPassword"></div>
+            </div>
+
+            <div class="input-group">
+              <label for="city">Ciudad</label>
+              <div class="input-with-icon">
+                <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                <input id="city" name="city" type="text" placeholder="Cali" autocomplete="address-level2" />
+              </div>
+              <div class="field-error" data-error-for="city"></div>
+            </div>
+
+            <div class="input-group">
+              <label for="specialty">Especialidad</label>
+              <div class="input-with-icon">
+                <i class="fa-solid fa-star" aria-hidden="true"></i>
+                <input id="specialty" name="specialty" type="text" placeholder="Diseñador UX/UI" />
+              </div>
+              <div class="field-error" data-error-for="specialty"></div>
+            </div>
+          </div>
+
+          <div class="input-group">
+            <fieldset class="input-group">
+              <legend>Tipo de usuario</legend>
+              <div class="segmented-control" role="radiogroup" aria-label="Tipo de usuario">
+              <label class="segmented-option">
+                <input type="radio" name="userType" value="Freelancer" checked />
+                <span>Freelancer</span>
+              </label>
+              <label class="segmented-option">
+                <input type="radio" name="userType" value="Cliente" />
+                <span>Cliente</span>
+              </label>
+              </div>
+            </fieldset>
+          </div>
+
+          <div class="checkbox-field">
+            <input id="terms" name="terms" type="checkbox" />
+            <label for="terms">Acepto los términos y condiciones.</label>
+          </div>
+          <div class="field-error" data-error-for="terms"></div>
+
+          <button type="submit" class="btn-submit">Crear Cuenta</button>
+
+          <div class="switch-link">
+            <span>¿Ya tienes cuenta?</span>
+            <button type="button" class="text-link" data-open-modal="loginModal">Iniciar sesión</button>
+          </div>
+        </form>
+
+        <div class="submit-loader" id="submitLoader" aria-hidden="true">
+          <div class="loader-ring"></div>
+          <p>Creando tu perfil...</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-overlay" id="loginModal" aria-hidden="true">
+      <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="loginTitle" tabindex="-1">
+        <button type="button" class="modal-close" data-close-modal="loginModal" aria-label="Cerrar modal">
+          <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+        </button>
+
+        <div class="modal-header">
+          <div class="modal-icon">
+            <i class="fa-solid fa-right-to-bracket" aria-hidden="true"></i>
+          </div>
+          <h2 id="loginTitle">Inicia sesión</h2>
+          <p>Accede a PROSPERA y explora tus oportunidades.</p>
+        </div>
+
+        <form id="loginForm" class="auth-form" novalidate>
+          <div class="input-group">
+            <label for="loginEmail">Correo electrónico</label>
+            <div class="input-with-icon">
+              <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+              <input id="loginEmail" name="loginEmail" type="email" placeholder="correo@ejemplo.com" autocomplete="email" />
+            </div>
+            <div class="field-error" data-error-for="loginEmail"></div>
+          </div>
+
+          <div class="input-group">
+            <label for="loginPassword">Contraseña</label>
+            <div class="input-with-icon">
+              <i class="fa-solid fa-lock" aria-hidden="true"></i>
+              <input id="loginPassword" name="loginPassword" type="password" placeholder="Tu contraseña" autocomplete="current-password" />
+            </div>
+            <div class="field-error" data-error-for="loginPassword"></div>
+          </div>
+
+          <button type="submit" class="btn-submit">Ingresar</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="modal-overlay" id="successModal" aria-hidden="true">
+      <div class="modal-card success-card" role="dialog" aria-modal="true" aria-labelledby="successTitle" tabindex="-1">
+        <button type="button" class="modal-close" data-close-modal="successModal" aria-label="Cerrar modal">
+          <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+        </button>
+
+        <div class="success-badge">
+          <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
+        </div>
+        <div class="confetti" aria-hidden="true">
+          <span></span><span></span><span></span><span></span><span></span><span></span>
+        </div>
+        <h2 id="successTitle">¡Bienvenido a PROSPERA!</h2>
+        <p>Tu cuenta ha sido creada correctamente. Ahora podrás acceder a oportunidades laborales y conectar con clientes de forma segura.</p>
+
+        <div class="modal-actions">
+          <button type="button" class="btn-secondary" id="goHomeButton">Ir al Inicio</button>
+          <button type="button" class="btn-primary" id="goDashboardButton">Explorar Plataforma</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-overlay" id="profileModal" aria-hidden="true">
+      <div class="modal-card profile-card" role="dialog" aria-modal="true" aria-labelledby="profileTitle" tabindex="-1">
+        <button type="button" class="modal-close" data-close-modal="profileModal" aria-label="Cerrar modal">
+          <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+        </button>
+
+        <div class="profile-shell">
+          <div class="profile-avatar">JP</div>
+          <div class="profile-meta">
+            <h2 id="profileTitle">Juan Pérez</h2>
+            <p>Freelancer · Cali</p>
+            <div class="rating">★★★★★</div>
+            <span class="status-pill">Verificado</span>
+          </div>
+        </div>
+
+        <div class="profile-stats">
+          <div>
+            <strong>42</strong>
+            <span>Trabajos realizados</span>
+          </div>
+          <div>
+            <strong>4.9</strong>
+            <span>Calificación</span>
+          </div>
+          <div>
+            <strong>UX/UI</strong>
+            <span>Especialidad</span>
+          </div>
+        </div>
+
+        <div class="modal-actions">
+          <button type="button" class="btn-secondary" id="editProfileButton">Editar Perfil</button>
+          <button type="button" class="btn-primary" data-close-modal="profileModal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-overlay" id="dashboardModal" aria-hidden="true">
+      <div class="modal-card dashboard-card" role="dialog" aria-modal="true" aria-labelledby="dashboardTitle" tabindex="-1">
+        <button type="button" class="modal-close" data-close-modal="dashboardModal" aria-label="Cerrar modal">
+          <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+        </button>
+
+        <div class="modal-header">
+          <div class="modal-icon">
+            <i class="fa-solid fa-chart-line" aria-hidden="true"></i>
+          </div>
+          <h2 id="dashboardTitle">Explora oportunidades</h2>
+          <p>Tu panel de trabajo simulado en PROSPERA.</p>
+        </div>
+
+        <div class="opportunity-grid">
+          <article class="opportunity-card">
+            <div class="opportunity-badge">Desarrollo Web</div>
+            <h3>Desarrollo Web para PyME</h3>
+            <p><strong>Empresa:</strong> NovaLabs</p>
+            <p><strong>Pago estimado:</strong> $1.200.000</p>
+            <p><strong>Ciudad:</strong> Cali</p>
+            <button type="button" class="opportunity-button" data-open-modal="jobDetailModal" data-job-id="0">Ver Detalle</button>
+          </article>
+
+          <article class="opportunity-card">
+            <div class="opportunity-badge">Diseño</div>
+            <h3>Diseño de Logotipo</h3>
+            <p><strong>Empresa:</strong> Aural Studio</p>
+            <p><strong>Pago estimado:</strong> $450.000</p>
+            <p><strong>Ciudad:</strong> Medellín</p>
+            <button type="button" class="opportunity-button" data-open-modal="jobDetailModal" data-job-id="1">Ver Detalle</button>
+          </article>
+
+          <article class="opportunity-card">
+            <div class="opportunity-badge">Servicios</div>
+            <h3>Instalación Eléctrica Residencial</h3>
+            <p><strong>Empresa:</strong> Volt House</p>
+            <p><strong>Pago estimado:</strong> $700.000</p>
+            <p><strong>Ciudad:</strong> Bogotá</p>
+            <button type="button" class="opportunity-button" data-open-modal="jobDetailModal" data-job-id="2">Ver Detalle</button>
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-overlay" id="jobDetailModal" aria-hidden="true">
+      <div class="modal-card detail-card" role="dialog" aria-modal="true" aria-labelledby="jobDetailTitle" tabindex="-1">
+        <button type="button" class="modal-close" data-close-modal="jobDetailModal" aria-label="Cerrar modal">
+          <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+        </button>
+
+        <div class="modal-header">
+          <div class="modal-icon">
+            <i class="fa-solid fa-file-lines" aria-hidden="true"></i>
+          </div>
+          <h2 id="jobDetailTitle">Detalle del trabajo</h2>
+          <p>Simulación de propuesta para una oportunidad real.</p>
+        </div>
+
+        <div class="detail-content">
+          <h3 id="detailJobTitle">Desarrollo Web para PyME</h3>
+          <p id="detailJobDescription">Proyecto de creación de un sitio institucional, desarrollo de landing page y mejora de conversión para una empresa en crecimiento.</p>
+          <ul>
+            <li><strong>Empresa:</strong> <span id="detailJobCompany">NovaLabs</span></li>
+            <li><strong>Pago estimado:</strong> <span id="detailJobPay">$1.200.000</span></li>
+            <li><strong>Ciudad:</strong> <span id="detailJobCity">Cali</span></li>
+            <li><strong>Tipo:</strong> <span id="detailJobType">Desarrollo Web</span></li>
+          </ul>
+        </div>
+
+        <div class="modal-actions">
+          <button type="button" class="btn-secondary" data-close-modal="jobDetailModal">Volver</button>
+          <button type="button" class="btn-primary" id="applyButton">Postularme</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-overlay" id="settingsModal" aria-hidden="true">
+      <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="settingsTitle" tabindex="-1">
+        <button type="button" class="modal-close" data-close-modal="settingsModal" aria-label="Cerrar modal">
+          <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+        </button>
+        <div class="modal-header">
+          <div class="modal-icon">
+            <i class="fa-solid fa-gear" aria-hidden="true"></i>
+          </div>
+          <h2 id="settingsTitle">Configuración</h2>
+          <p>Esta vista es una simulación del panel de preferencias del usuario.</p>
+        </div>
+        <div class="settings-panel">
+          <div class="settings-item">
+            <span>Notificaciones</span>
+            <i class="fa-solid fa-toggle-on" aria-hidden="true"></i>
+          </div>
+          <div class="settings-item">
+            <span>Visibilidad del perfil</span>
+            <i class="fa-solid fa-shield-halved" aria-hidden="true"></i>
+          </div>
+          <div class="settings-item">
+            <span>Privacidad del correo</span>
+            <i class="fa-solid fa-lock" aria-hidden="true"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="toast" id="toastMessage" aria-live="polite"></div>
 
     <script src="script.js"></script>
   </body>
